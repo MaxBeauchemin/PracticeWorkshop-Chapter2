@@ -1,0 +1,9 @@
+E:\Projects\PracticeWorkshop-Chapter2\Domain\bin\Debug\netstandard2.0\Domain.deps.json
+E:\Projects\PracticeWorkshop-Chapter2\Domain\bin\Debug\netstandard2.0\Domain.dll
+E:\Projects\PracticeWorkshop-Chapter2\Domain\bin\Debug\netstandard2.0\Domain.pdb
+E:\Projects\PracticeWorkshop-Chapter2\Domain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
+E:\Projects\PracticeWorkshop-Chapter2\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
+E:\Projects\PracticeWorkshop-Chapter2\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
+E:\Projects\PracticeWorkshop-Chapter2\Domain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
+E:\Projects\PracticeWorkshop-Chapter2\Domain\obj\Debug\netstandard2.0\Domain.dll
+E:\Projects\PracticeWorkshop-Chapter2\Domain\obj\Debug\netstandard2.0\Domain.pdb
