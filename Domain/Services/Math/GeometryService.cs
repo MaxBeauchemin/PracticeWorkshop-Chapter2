@@ -15,12 +15,47 @@ namespace Domain.Services
         /// <returns></returns>
         public static Response<CartesianCoordinates> PolarToCartesian(PolarCoordinates request)
         {
+            var response = new Response<CartesianCoordinates>();
+            
+            if(request == null)
+            {
+                response.Success = false;
+                response.Message = "You failed to provide the necessary variables. Goodbye!!";
+                return response;
+            }
 
-            //< PUT YOUR CODE HERE >
+            if (request.DistanceFromOrigin == null)
+            {
+                response.Success = false;
+                response.Message = "The Distance from origin was left empty. Goodbye!!";
+                return response;
+            }
 
+            if (request.Angle == null)
+            {
+                response.Success = false;
+                response.Message = "The angle provided was left empty. Goodbye!!";
+                return response;
+            }
 
+            if (request.DistanceFromOrigin < 0)
+            {
+                response.Success = false;
+                response.Message = "Distance from origin cannot be negative. Goodbye!!";
+                return response;
+            }
 
-            return null; // <-- Delete this
+            response.Value = new CartesianCoordinates();
+
+            response.Value.XLocation = 0;
+            response.Value.YLocation = 0;
+
+            var radians = request.Angle.Value * (Math.PI / 180);
+
+            response.Value.XLocation = request.DistanceFromOrigin * Math.Cos(radians);
+            response.Value.YLocation = request.DistanceFromOrigin * Math.Sin(radians);
+
+            return response; 
         }
     }
 }
