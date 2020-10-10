@@ -1,0 +1,10 @@
+E:\Projects\PracticeWorkshop-Chapter2\Database\bin\Debug\Database.dacpac
+E:\Projects\PracticeWorkshop-Chapter2\Database\bin\Debug\Database.dll
+E:\Projects\PracticeWorkshop-Chapter2\Database\bin\Debug\Database.pdb
+E:\Projects\PracticeWorkshop-Chapter2\Database\obj\Debug\Database.sqlprojAssemblyReference.cache
+E:\Projects\PracticeWorkshop-Chapter2\Database\obj\Debug\Database.dll
+E:\Projects\PracticeWorkshop-Chapter2\Database\obj\Debug\Database.pdb
+E:\Projects\PracticeWorkshop-Chapter2\Database\obj\Debug\Model.xml
+E:\Projects\PracticeWorkshop-Chapter2\Database\obj\Debug\refactor.xml
+E:\Projects\PracticeWorkshop-Chapter2\Database\obj\Debug\postdeploy.sql
+E:\Projects\PracticeWorkshop-Chapter2\Database\obj\Debug\predeploy.sql

@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Logs]
+(
+	[LogId]			INT				NOT NULL		IDENTITY(1,1)		PRIMARY KEY,
+	[LogArea]		NVARCHAR(50)	NOT NULL,
+	[LogType]		NVARCHAR(25)	NOT NULL,
+	[Message]		NVARCHAR(250)	NOT NULL,
+	[Data]			NVARCHAR(MAX)	NULL,
+	[Timestamp]		DATETIME		NOT NULL
+)

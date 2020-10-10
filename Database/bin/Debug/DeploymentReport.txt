@@ -1,0 +1,20 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Logs] (Table)
+       [dbo].[OrderLineItems] (Table)
+       [dbo].[Orders] (Table)
+       [dbo].[Products] (Table)
+       Foreign Key: <unnamed> (Foreign Key)
+       Foreign Key: <unnamed> (Foreign Key)
+
+** Supporting actions
