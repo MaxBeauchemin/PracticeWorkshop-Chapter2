@@ -53,11 +53,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{F4F31DDD-3849-48CD-AB5A-1BFC2ABD4F02}</Project>
+      <Project>{d41bf13d-105c-4664-8d00-c04ab484ba90}</Project>
       <Name>Domain</Name>
     </ProjectReference>
   </ItemGroup>

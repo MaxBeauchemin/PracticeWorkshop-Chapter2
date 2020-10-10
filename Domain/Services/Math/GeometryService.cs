@@ -1,5 +1,8 @@
 ﻿using Domain.DTOs.Common;
 using Domain.DTOs.Math;
+using Domain.Resources;
+using Domain.Services.Common;
+using Domain.Types;
 using System;
 
 namespace Domain.Services
@@ -16,44 +19,55 @@ namespace Domain.Services
         public static Response<CartesianCoordinates> PolarToCartesian(PolarCoordinates request)
         {
             var response = new Response<CartesianCoordinates>();
-            
-            if(request == null)
+            var cMethodName = "GeometryService.PolarToCartesian(..)";
+
+            try
+            {
+                if (request == null)
+                {
+                    throw new ArgumentException(DomainResource.NullRequest);
+                }
+
+                if (request.DistanceFromOrigin == null)
+                {
+                    throw new ArgumentException(string.Format(DomainResource.XCannotBeNullOrEmpty, "Distance From Origin"));
+                }
+
+                if (request.Angle == null)
+                {
+                    throw new ArgumentException(string.Format(DomainResource.XCannotBeNullOrEmpty, "Angle"));
+                }
+
+                if (request.DistanceFromOrigin < 0)
+                {
+                    throw new ArgumentException(string.Format(DomainResource.XCannotBeNegative, "Distance From Origin"));
+                }
+
+                response.Value = new CartesianCoordinates();
+
+                response.Value.XLocation = 0;
+                response.Value.YLocation = 0;
+
+                var radians = request.Angle.Value * (Math.PI / 180);
+
+                response.Value.XLocation = request.DistanceFromOrigin * Math.Cos(radians);
+                response.Value.YLocation = request.DistanceFromOrigin * Math.Sin(radians);
+            }
+            catch (Exception ex)
             {
                 response.Success = false;
-                response.Message = "You failed to provide the necessary variables. Goodbye!!";
-                return response;
+                response.Message = ex.Message;
+
+                var logData = new
+                {
+                    Request = request,
+                    Exception = ex
+                };
+
+                var msg = string.Format(DomainResource.ErrorOccuredInXY, cMethodName, ex.Message);
+
+                LoggerService.Log(LogArea.Math, GeneralHelper.ExceptionLogType(ex), msg, logData);
             }
-
-            if (request.DistanceFromOrigin == null)
-            {
-                response.Success = false;
-                response.Message = "The Distance from origin was left empty. Goodbye!!";
-                return response;
-            }
-
-            if (request.Angle == null)
-            {
-                response.Success = false;
-                response.Message = "The angle provided was left empty. Goodbye!!";
-                return response;
-            }
-
-            if (request.DistanceFromOrigin < 0)
-            {
-                response.Success = false;
-                response.Message = "Distance from origin cannot be negative. Goodbye!!";
-                return response;
-            }
-
-            response.Value = new CartesianCoordinates();
-
-            response.Value.XLocation = 0;
-            response.Value.YLocation = 0;
-
-            var radians = request.Angle.Value * (Math.PI / 180);
-
-            response.Value.XLocation = request.DistanceFromOrigin * Math.Cos(radians);
-            response.Value.YLocation = request.DistanceFromOrigin * Math.Sin(radians);
 
             return response; 
         }
