@@ -3,11 +3,7 @@ E:\Projects\PracticeWorkshop-Chapter2\Domain\obj\Debug\Domain.csproj.CoreCompile
 E:\Projects\PracticeWorkshop-Chapter2\Domain\bin\Debug\Domain.dll.config
 E:\Projects\PracticeWorkshop-Chapter2\Domain\bin\Debug\Domain.dll
 E:\Projects\PracticeWorkshop-Chapter2\Domain\bin\Debug\Domain.pdb
-E:\Projects\PracticeWorkshop-Chapter2\Domain\bin\Debug\EntityFramework.dll
-E:\Projects\PracticeWorkshop-Chapter2\Domain\bin\Debug\EntityFramework.SqlServer.dll
 E:\Projects\PracticeWorkshop-Chapter2\Domain\bin\Debug\Newtonsoft.Json.dll
-E:\Projects\PracticeWorkshop-Chapter2\Domain\bin\Debug\EntityFramework.xml
-E:\Projects\PracticeWorkshop-Chapter2\Domain\bin\Debug\EntityFramework.SqlServer.xml
 E:\Projects\PracticeWorkshop-Chapter2\Domain\bin\Debug\Newtonsoft.Json.xml
 E:\Projects\PracticeWorkshop-Chapter2\Domain\obj\Debug\Domain.csproj.CopyComplete
 E:\Projects\PracticeWorkshop-Chapter2\Domain\obj\Debug\Domain.dll

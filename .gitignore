@@ -4,3 +4,6 @@
 
 /.vs
 /Database
+/Domain/obj/Debug
+/UnitTests/bin/Debug
+/UnitTests/obj/Debug/build.force

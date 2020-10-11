@@ -3,6 +3,7 @@
     public enum LogArea
     {
         Common,
+        Database,
         Math
     }
 }

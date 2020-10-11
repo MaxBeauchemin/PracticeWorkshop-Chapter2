@@ -9,7 +9,7 @@ namespace Domain.Services.Common
     {
         public static void Log(LogArea logArea, LogType logType, string message, object data)
         {
-            var connectionString = AppSettings.GetConnectionString("DatabaseContext");
+            var connectionString = AppSettings.GetConnectionString("Entities");
 
             var conn = new SqlConnection(connectionString);
 
