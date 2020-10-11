@@ -1,7 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using Domain.DTOs.Common;
 using Domain.DTOs.Sales;
+using Domain.Resources;
 using Domain.Services.Common;
+using Domain.Types;
 
 namespace Domain.Services.Sales
 {
@@ -49,6 +53,53 @@ namespace Domain.Services.Sales
             }
 
             return output;
+        }
+
+        /// <summary>
+        /// This method should return all Product records which match the search criteria provided
+        ///     - TextFilter (optional)
+        ///         Filters products based on Code or Description containing the text
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public Response<List<Product>> GetProducts(ProductRequest request)
+        {
+            var response = new Response<List<Product>>();
+            var cMethodName = "OrderService.GetProducts(..)";
+
+            try
+            {
+                if (request == null)
+                {
+                    throw new ArgumentException(DomainResource.NullRequest);
+                }
+
+                var sqlQuery = @"<Your SQL Code Here>";
+
+                var sqlResponse = Database.Read<Product>(sqlQuery);
+
+                if (sqlResponse.Success)
+                {
+                    response.Value = sqlResponse.Value;
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Success = false;
+                response.Message = ex.Message;
+
+                var logData = new
+                {
+                    Request = request,
+                    Exception = ex
+                };
+
+                var msg = string.Format(DomainResource.ErrorOccuredInXY, cMethodName, ex.Message);
+
+                LoggerService.Log(LogArea.Sales, GeneralHelper.ExceptionLogType(ex), msg, logData);
+            }
+
+            return response;
         }
     }
 }

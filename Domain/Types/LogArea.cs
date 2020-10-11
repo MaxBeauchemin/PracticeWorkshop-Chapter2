@@ -4,6 +4,7 @@
     {
         Common,
         Database,
-        Math
+        Math,
+        Sales
     }
 }
